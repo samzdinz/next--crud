@@ -1,0 +1,20 @@
+{
+    "Products":[ 
+    {
+        "id": 1,
+        "name": "Komputer xxx",
+        "price": 5000
+    },
+    {
+        "id": 2,
+        "name": "Laptop",
+        "price": 3000
+    },
+    {
+        "id": 3,
+        "name": "Monitor",
+        "price": 1000
+    }
+]
+    
+}
