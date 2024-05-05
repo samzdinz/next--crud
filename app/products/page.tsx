@@ -1,19 +1,24 @@
-type Products = {
+import AddProduct from "./addProduct"
+
+type Product = {
     id: number
     name: string
     price: number
 }
 
 const getProducts = async() =>{
-    const res = await fetch(`http://localhost:5000/Products`, {cache: "no-store",});
+    const res = await fetch(`http://localhost:5000/products`, {cache: "no-store",});
     return res.json()
 }
 
 export default async function ProductList() {
-    const products: Products[] = await getProducts()
+    const products: Product[] = await getProducts()
 
   return (
     <div className="px-10 py-10">
+        <div className="py-2">
+            <AddProduct />
+        </div>
         <table className="table w-full">
             <thead>
                 <tr>
@@ -24,9 +29,9 @@ export default async function ProductList() {
                 </tr>
             </thead>
             <tbody>
-                {products.map(product => (
+                {products.map((product, index) => (
                     <tr key={product.id}>
-                        <td>{product.id}</td>
+                        <td>{index + 1}</td>
                         <td>{product.name}</td>
                         <td>{product.price}</td>
                         <td></td>
