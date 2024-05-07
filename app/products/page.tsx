@@ -1,10 +1,7 @@
 import AddProduct from "./addProduct"
-
-type Product = {
-    id: number
-    name: string
-    price: number
-}
+import DeleteProduct from "./deleteProduct"
+import UpdateProduct from "./updateProduct"
+import Product from "../utilities/product"
 
 const getProducts = async() =>{
     const res = await fetch(`http://localhost:5000/products`, {cache: "no-store",});
@@ -20,7 +17,7 @@ export default async function ProductList() {
             <AddProduct />
         </div>
         <table className="table w-full">
-            <thead>
+            <thead className="text-lg">
                 <tr>
                     <th>#</th>
                     <th>Name</th>
@@ -34,7 +31,9 @@ export default async function ProductList() {
                         <td>{index + 1}</td>
                         <td>{product.name}</td>
                         <td>{product.price}</td>
-                        <td></td>
+                        <td className="flex gap-2">
+                            <UpdateProduct {...product} />
+                            <DeleteProduct {...product}/></td>
                     </tr>
                 ))}
             </tbody>

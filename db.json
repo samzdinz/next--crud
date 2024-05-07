@@ -1,29 +1,24 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Komputer xxx",
+      "id": "2",
+      "name": "Laptop updated",
       "price": 5000
     },
     {
-      "id": 2,
-      "name": "Laptop",
-      "price": 3000
-    },
-    {
-      "id": 3,
+      "id": "3",
       "name": "Monitor",
       "price": 1000
     },
     {
-      "id": "f67c",
-      "name": "mouse",
-      "price": "500"
+      "id": "7d48",
+      "name": "product 4",
+      "price": "7000"
     },
     {
-      "id": "0eff",
-      "name": "mouse pad",
-      "price": "200"
+      "id": "bbf4",
+      "name": "headset",
+      "price": "150000"
     }
   ]
 }
